@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <% if (message) { %>
+            <div class="alert">
+                <%= message %>
+            </div>
+            <% } %>
+    
+    <h1>SIGN IN</h1>
+    <form action="/signin" method="POST">
+        <input name="email" class="email" type="email" placeholder="email" required/>
+        <input name="password" class="password" type="password" placeholder="password" required/>
+        <button class="login">Log In</button>
+        <a href="/signup">Sign Up</a> or <a href="/password-recovery">Recover Password</a>
+        if you forgot your password <a href="/password-reset">Password Reset</a>
+
+    </form>    
+    <script src="main.js"></script>
+</body>
+</html>

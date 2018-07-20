@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <h1>update</h1>
+    <div class="container">
+            <% if (message) { %>
+                <div class="alert">
+                    <%= message %>
+                </div>
+                <% } %>
+
+    <form action="/update-profile" method="POST">
+        <input name="name" class="name" placeholder="name" value="<%= user.name %>" required/>
+        <input name="email" class="email" type="email" placeholder= "email"  value="<%= user.email %>"required/>
+        <input name="password" class="password" type="password"  placeholder="old password" required/>
+        <input name="new_password" class="password" type="password"  placeholder="new password" required/>
+        <input name="new_password_confirmation" class="password" type="password"  placeholder="new password confirmation" required/>
+        <button type="submit">Update</button>
+        <a href="/profile">Profile</a>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
